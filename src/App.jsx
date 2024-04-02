@@ -2,6 +2,7 @@ import { useState,useEffect, useRef, useMemo, createContext, useContext, useRedu
 import Props from './Props';
 import Todo from './Todo';
 import UserInput from './Hook/UserInput';
+import Images from './Images';
 
 //Es6 Classes
 class car{
@@ -296,6 +297,26 @@ function App({a,b}) {
     resetfirstname();
   }
 
+  //map real world example
+  //search and filter
+  const arr=[
+    {
+      image:'images/3.png',
+      name:'RAHUL RAJ 1',
+      age: '22'
+    },
+    {
+      image:'images/4.png',
+      name:'rahul raj 2',
+      age: 21
+    },
+    {
+      image:'images/5.png',
+      name:'rahul raj 3',
+      age: 21
+    }
+  ]
+
   
   return (
     <>
@@ -424,7 +445,10 @@ function App({a,b}) {
         />
 
         <button type='submit' onClick={handlesubmit}>submit</button>
+        <br />
 
+        <h1>real world example for .map</h1>
+        <Images arr={arr} />
     </>
 
     
