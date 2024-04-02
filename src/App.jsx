@@ -8,6 +8,9 @@ import Porfile from './Porfile';
 import Dashboard from './Dashboard';
 import Bro from './Bro';
 import Sis from './Sis';
+import ComponentThatMightThrowError from './ComponentThatMightThrowError';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorFallback from './ErrorFallback';
 
 //Es6 Classes
 class car{
@@ -129,6 +132,10 @@ function createTodo(name){
   }
 }
 
+
+
+
+//App
 function App({a,b}) {
   const m=new Mycar('ford','1990');
   console.log(hello('world'))
@@ -333,6 +340,11 @@ const  handlebro=()=>{
 const handlesis=()=>{
   setSis(sis+1)
 }
+
+const errorHandler=(error,errorInfo)=>{
+  console.log('Error is ',error);
+  console.log('Error Info is', errorInfo);
+}
   
   return (
     <>
@@ -483,6 +495,14 @@ const handlesis=()=>{
         <button onClick={handlesis}>sis val</button>
         <Bro val={bro}/>
         <Sis val={sis}/>
+
+
+        <br />
+        <h1>Error Boundary </h1>
+        <ErrorBoundary FallbackComponent={ErrorFallback}  onError={errorHandler}>
+          <ComponentThatMightThrowError />
+        </ErrorBoundary>
+
     </>
 
     
