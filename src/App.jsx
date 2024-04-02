@@ -6,6 +6,8 @@ import Images from './Images';
 import Tablee from './Tablee';
 import Porfile from './Porfile';
 import Dashboard from './Dashboard';
+import Bro from './Bro';
+import Sis from './Sis';
 
 //Es6 Classes
 class car{
@@ -320,6 +322,17 @@ function App({a,b}) {
     }
   ]
 
+
+  //React.Memo
+const [bro,setbro]=useState(5);
+const [sis,setSis]=useState(10);
+
+const  handlebro=()=>{
+  setbro(bro+1)
+}
+const handlesis=()=>{
+  setSis(sis+1)
+}
   
   return (
     <>
@@ -462,6 +475,14 @@ function App({a,b}) {
         {/* higher order component is a function that takes a component and return a new Component */}
         <Porfile />
         <Dashboard />
+        <br />
+        <br />
+
+        <h1>React Memo</h1>
+        <button onClick={handlebro}>bro val</button>
+        <button onClick={handlesis}>sis val</button>
+        <Bro val={bro}/>
+        <Sis val={sis}/>
     </>
 
     
