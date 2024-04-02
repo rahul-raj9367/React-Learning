@@ -4,6 +4,8 @@ import Todo from './Todo';
 import UserInput from './Hook/UserInput';
 import Images from './Images';
 import Tablee from './Tablee';
+import Porfile from './Porfile';
+import Dashboard from './Dashboard';
 
 //Es6 Classes
 class car{
@@ -454,6 +456,12 @@ function App({a,b}) {
         <br />
         <h1>Table search using filter</h1>
         <Tablee />
+
+        <br />
+        <h1>Higher Order Component  (reuse component logic )</h1>
+        {/* higher order component is a function that takes a component and return a new Component */}
+        <Porfile />
+        <Dashboard />
     </>
 
     
