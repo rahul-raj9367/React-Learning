@@ -33,7 +33,7 @@ export default function Images({arr}) {
         <div style={{display:"flex"}}>
      
         {filteredData.length === 0 ? (
-          <li>No results found</li>
+          <li>No results {searchQuery} found</li>
         ) : (
           filteredData.map((item, index) => (
             <li key={index}>

@@ -3,6 +3,7 @@ import Props from './Props';
 import Todo from './Todo';
 import UserInput from './Hook/UserInput';
 import Images from './Images';
+import Tablee from './Tablee';
 
 //Es6 Classes
 class car{
@@ -449,6 +450,10 @@ function App({a,b}) {
 
         <h1>real world example for .map</h1>
         <Images arr={arr} />
+
+        <br />
+        <h1>Table search using filter</h1>
+        <Tablee />
     </>
 
     
