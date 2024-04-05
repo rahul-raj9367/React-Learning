@@ -11,6 +11,8 @@ import Sis from './Sis';
 import ComponentThatMightThrowError from './ComponentThatMightThrowError';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from './ErrorFallback';
+import CallBack from './CallBack';
+import './App.css'
 
 //Es6 Classes
 class car{
@@ -345,6 +347,13 @@ const errorHandler=(error,errorInfo)=>{
   console.log('Error is ',error);
   console.log('Error Info is', errorInfo);
 }
+
+//
+const [UIcolor,SetUicolor]=useState(null);
+
+const getColor=(color)=>{
+  SetUicolor(color);
+}
   
   return (
     <>
@@ -502,6 +511,16 @@ const errorHandler=(error,errorInfo)=>{
         <ErrorBoundary FallbackComponent={ErrorFallback}  onError={errorHandler}>
           <ComponentThatMightThrowError />
         </ErrorBoundary>
+
+        <br />
+
+        <h1>Call Back Child to Parent</h1>
+        <div id="back" style={{background:`${UIcolor}`}}>
+          
+        </div>
+        <CallBack getColor={getColor}/>
+
+
 
     </>
 
