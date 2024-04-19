@@ -9,8 +9,6 @@ export default function CallBack({getColor}) {
     }
   return (
     <div>
-      
-
       <input type="text" value={activecolor} onChange={handlechange} />
     </div>
   )

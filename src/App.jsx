@@ -13,6 +13,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from './ErrorFallback';
 import CallBack from './CallBack';
 import './App.css'
+import ParentComponent from './ParentComponent';
 
 //Es6 Classes
 class car{
@@ -519,6 +520,16 @@ const getColor=(color)=>{
           
         </div>
         <CallBack getColor={getColor}/>
+
+        <br />
+        <h1>Lifting State Up</h1>
+        <ParentComponent />
+
+
+
+
+
+        <br />
 
 
 
